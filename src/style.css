@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --main-bg: #fff7ed;
+
+  --fs-header__title: 2.25rem;
+
+  --fw-header__title: 900;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--main-bg);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/**************
+    Buttons
+**************/
+.btn {
+  font-size: inherit;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+.main__btn {
+  background-color: #ff8c38;
+  width: 100%;
+  max-width: 700px;
+}
+
+.btn.cta__about__btn {
+  border-radius: 10px;
+  padding: 15px 22px;
+  background-color: #161616;
+}
+
+@media (min-width: 550px) {
+  .main__btn {
+    width: 80%;
+  }
+}
+
+@media (min-width: 700px) {
+  .main__btn {
+    width: 50%;
+  }
+}
+
+/************
+    Header 
+************/
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  padding: 0 26px;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header__title {
+  font-size: var(--fs-header__title);
+  font-weight: var(--fw-header__title);
+  text-transform: uppercase;
+}
+
+.header__title a {
+  color: #161616;
+}
+
+.nav > a + a {
+  margin-left: 12px;
+}
+
+.nav > a,
+.nav > a:visited {
+  color: #4d4d4d;
+}
+
+.nav > a:hover {
+  text-decoration: underline;
+  color: #161616;
+}
+
+/************
+    Home
+************/
+.main,
+.about {
+  min-height: calc(100vh - 100px - 60px);
+  /* padding: 0 26px; */
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* min-height: calc(100vh - 9vh - 6vh); */
+  /* background-image: url("../public/images/main_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  background-color: #2a2929;
+  color: #fff;
+  padding: 0 26px;
+}
+
+.main__subtitle {
+  margin: 0;
+}
+
+.main__description {
+  font-weight: 500;
+  max-width: 505px;
+  margin-bottom: 51px;
+}
+
+/**************
+   About Page
+**************/
+.featured__image {
+  width: 100%;
+  display: block;
+}
+.about__container {
+  padding: 26px 26px;
+}
+
+.about__subtitle {
+  font-size: 2rem;
+  margin: 0.5em 0;
+}
+
+.cta__container {
+  background: #ffcc8d;
+  padding: 36px;
+  border-radius: 5px;
+  max-width: 475px;
+  margin-top: 2em;
+}
+.cta__description {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #161616;
+  margin: 0;
+}
+
+.cta__description.margin--btm {
+  margin-bottom: 1.5625rem;
+}
+/************
+    footer 
+************/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #252525;
+  color: #aaa;
+  font-size: 0.875rem;
+  margin-top: auto;
+  height: 60px;
+}
